@@ -19,21 +19,22 @@
     <center> <button data-var="new_widget">Click to create a widget!</button> </center>
 </p>
 
-<script class="builder">
- var w=this;
- 
- this.childs.A.set_title("This title was changed by the parent widget!");
- this.childs.B.content.innerHTML="We can also directly access a widget's element identified by a <i>data-var</i> attribute";
+    <script class="builder" >
 
- var idx=0;
- 
- this.new_widget.addEventListener("click", function(){
+var w=this;
+
+this.childs.A.set_title("This title was changed by the parent widget!");
+this.childs.B.content.innerHTML="We can also directly access a widget's element identified by a <i>data-var</i> attribute";
+
+var idx=0;
+
+this.new_widget.addEventListener("click", function(){
      var wname="W"+(idx++);
-     var li=document.createElement("li"); w.list.appendChild(li);
-     
-     factory.create_widget("test_com_widget", w, li, wname).then(function(child){
-	 child.set_title("This widget (" + child.name + ") has been dynamically created !");
-     });
- });
- 
+    var li=document.createElement("li"); w.list.appendChild(li);
+    
+    factory.create_widget("test_com_widget", w, li, wname).then(function(child){
+	child.set_title("This widget (" + child.name + ") has been dynamically created !");
+    });
+});
+
 </script>

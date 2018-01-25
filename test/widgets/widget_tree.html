@@ -1,0 +1,22 @@
+
+<h4>Widgets can communicate with each other</h4>
+
+<p>Widgets can be given a "name" attribute and will be accessible in the tree by accessing the <i>childs</i> object. </p>
+<p>For example here we create two instances of the same widget and show how we can communicate with these widgets. </p>
+
+<ul>
+    <li> <x-widget data-class="test_com_widget" name="A"> </x-widget> </li>
+    <li> <x-widget data-class="test_com_widget" name="B"> </x-widget> </li>
+</ul>
+
+<p>The following "D" div will be accessed by our childs : 
+    <div data-var="D"> </div>
+</p>
+
+<script class="builder">
+ console.log("Hello");
+ 
+ this.childs.A.set_title("This title was changed by the parent widget!");
+ this.childs.B.content.innerHTML="We can also directly access a widget's element identified by a <i>data-var</i> attribute";
+ 
+</script>

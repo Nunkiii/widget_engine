@@ -1,0 +1,19 @@
+<h5 data-var="title">Default title </h5>
+<div data-var="content">Default content</div>
+<p>Click this button to change our parent's "D" div'c content : <button data-var="b">Click me!</button>
+
+<script class="builder">
+ var w=this;
+
+
+ //We can implement widget's API by attaching functions to our widget : 
+ 
+ this.set_title=function(title){
+     w.title.innerHTML=title;
+ }
+
+ this.b.addEventListener("click", function(){
+     w.parent.D.innerHTML="This was changed by child widget " + w.name + " :) ";
+ });
+ 
+</script>

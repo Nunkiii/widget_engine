@@ -3,7 +3,7 @@ Lightweight HTML/JavaScript widget engine to create reusable web components.
 
 See the **test** directory to learn how to use this simple library.
 
-##Index.html
+## Index.html
 
 ```html
 <!DOCTYPE html>
@@ -34,9 +34,9 @@ See the **test** directory to learn how to use this simple library.
 
 ```
 
-##Test widgets
+## Test widgets
 
-###simple.html
+### simple.html
 
 ```html
 
@@ -47,7 +47,7 @@ You can write any HTML here...
 
 ```
 
-###simple_script.html
+### simple_script.html
 
 ```html
 <h4>Simple widget with a control script</h4>
@@ -66,7 +66,7 @@ You can write any HTML here...
 
 ```
 
-###widget_tree.html
+### widget_tree.html
 
 ```html
 
@@ -94,7 +94,7 @@ You can write any HTML here...
 
 ```
 
-###test_com_widget.html
+### test_com_widget.html
 
 ```html
 <h5 data-var="title">Default title </h5>

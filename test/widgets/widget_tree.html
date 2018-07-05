@@ -1,40 +1,45 @@
 
-<h4>Widgets can communicate with each other</h4>
+<h2>Widgets can communicate with each other</h2>
 
-<p>Widgets can be given a "name" attribute and will be accessible in the tree by accessing the <i>childs</i> object. </p>
-<p>For example here we create two instances of the same widget and show how we can communicate with these widgets. </p>
+<p>Widgets can be given a "name" attribute and will be accessible in
+the tree by accessing the <em>childs</em> object.
+
+<p>For example here we create two instances of the same widget and
+show how we can communicate with these widgets.
 
 <ul data-var="list">
     <li> <x-widget data-class="test_com_widget" name="A"> </x-widget> </li>
     <li> <x-widget data-class="test_com_widget" name="B"> </x-widget> </li>
 </ul>
 
-<p>The following "D" div will be accessed by our childs : 
-    <div data-var="D"> </div>
-</p>
+<p>The following "D" div will be accessed by our childs:
+  <div data-var="D"> </div>
 
-<h5>Dynamic creation of widgets</h5>
+<h3>Dynamic creation of widgets</h3>
 
-<p>It is also possible to dynamically create widgets from our JavaScript by using the <i>factory</i> <b>create_widget</b> function. Click this button to add more "test_com_widget" widgets to the list above :
-    <center> <button data-var="new_widget">Click to create a widget!</button> </center>
-</p>
+<p>It is also possible to dynamically create widgets from our
+  JavaScript by using
+  the <em>factory</em> <strong>create_widget</strong> function. Click
+  this button to add more "test_com_widget" widgets to the list above:
+  <button data-var="new_widget">Click to create a widget!</button>
 
-    <script class="builder" >
-
-var w=this;
-
-this.childs.A.set_title("This title was changed by the parent widget!");
-this.childs.B.content.innerHTML="We can also directly access a widget's element identified by a <i>data-var</i> attribute";
-
-var idx=0;
-
-this.new_widget.addEventListener("click", function(){
-     var wname="W"+(idx++);
-    var li=document.createElement("li"); w.list.appendChild(li);
+  
+<script class="builder">
     
-    factory.create_widget("test_com_widget", w, li, wname).then(function(child){
-	child.set_title("This widget (" + child.name + ") has been dynamically created !");
+    var w=this;
+
+    this.childs.A.set_title("This title was changed by the parent widget!");
+    this.childs.B.content.innerHTML="We can also directly access a widget's element identified by a <i>data-var</i> attribute";
+
+    var idx=0;
+
+    this.new_widget.addEventListener("click", function(){
+        var wname="W"+(idx++);
+        var li=document.createElement("li"); w.list.appendChild(li);
+    
+        factory.create_widget("test_com_widget", w, li, wname).then(function(child){
+	    child.set_title("This widget (" + child.name + ") has been dynamically created !");
+        });
     });
-});
 
 </script>

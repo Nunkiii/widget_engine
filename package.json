@@ -1,0 +1,25 @@
+{
+  "name": "widget_engine",
+  "version": "0.1.0",
+  "description": "Lightweight HTML/JavaScript widget engine to create reusable web components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nunkiii/widget_engine.git"
+  },
+  "keywords": [
+    "html5",
+    "client",
+    "widget",
+    "widgets"
+  ],
+  "author": "Pierre Sprimont",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nunkiii/widget_engine/issues"
+  },
+  "homepage": "https://github.com/Nunkiii/widget_engine#readme"
+}

@@ -1,13 +1,18 @@
-<h4>Simple widget with a control script</h4>
 
-<p>You can handle your widget's interactivity using a <i>builder script</i>. The builder script is contained in a script tag with "builder" as class attribute.</p>
-<p>Any HTML element in your widget can be identified for easy access using the <i>data-var</i> attribute, for example to handle click on a button :
-    <center> <button data-var="b">Click me!</button> </center>
-</p>
+<h2>Simple widget with a control script</h2>
+
+<p>You can handle your widget's interactivity using a <em>builder
+script</em>. The builder script is contained in a script tag with
+  "builder" as class attribute.
+  
+<p>Any HTML element in your widget can be identified for easy access
+  using the <i>data-var</i> attribute, for example to handle click on
+  a button:
+  <button data-var="b">Click me!</button> </center>
 
 
 <script class="builder">
 
- this.b.addEventListener("click",function(){ alert("You clicked me!");});
+  this.b.addEventListener("click",function(){ alert("You clicked me!");});
  
 </script>
